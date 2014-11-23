@@ -1,5 +1,19 @@
 # asm
-
 *.o
 *~
-bin/
+*swp
+*.sh
+
+#executables
+first
+sum01
+sum02
+load01
+store01
+store01
+branch01
+compare01
+collatz
+loop01
+loop02
+loop

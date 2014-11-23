@@ -9,7 +9,7 @@ loop:
     
     and r3, r1, #1      /* r3 = r1 & 1 */
     cmp r3, #0          /* compare r3 and 0 */
-    bne odd:            /* branch to odd if r3 != 0 */
+    bne odd             /* branch to odd if r3 != 0 */
 even:
     mov r1, r1, ASR #1  /* r1 = (r1 >> 1) */
     b end_loop          

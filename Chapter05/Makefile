@@ -1,4 +1,4 @@
-EXES=first
+EXES=$(shell ls | xargs -n 1 | grep .s$ | cut -d '.' -f 1)
 
 all: $(EXES)
 
@@ -10,7 +10,5 @@ all: $(EXES)
 %.o : %.s
 	as -o $@ $<
 
-.PHONY: clean
 clean: 
 	rm $(EXES)
-

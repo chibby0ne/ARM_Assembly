@@ -21,9 +21,11 @@ end:
     bx lr
 
 /* better: only 4 instructions inside loop instead of 5,
-only one branch (conditional) inside inside loop
+only one branch (conditional) inside inside loop */
 
+/*
 requirements:
 invert brach condition (test for what keeps it looping)
 test at the end of loop
 enter loop with unconditional jump to the test part
+*/
