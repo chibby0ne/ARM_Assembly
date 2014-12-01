@@ -15,8 +15,7 @@ message2: .asciz "The factorial of %d is %d\n"
 .text
 
 factorial:
-    str lr, [sp, #-4]!      /* push lr onto the top of the stack */
-    str r4, [sp, #-4]!      /* push r0 onto the topp of the stack */
+    stmdb sp!, {r4, lr}
 
     mov r4, r0              /* keep a copy of the initial value of r0 in r4 */
     
@@ -33,8 +32,7 @@ is_nonzero:
     mul r0, r0, r1
 
 end:
-    ldr r4, [sp], #+4
-    ldr lr, [sp], #+4       /* pop lr keep in the stack to lr */
+    ldmia sp!, {r4, lr}
     bx lr                   /* leave func */
     
 .global main
